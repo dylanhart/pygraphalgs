@@ -22,7 +22,7 @@ def find_path(graph, pos, goal, h):
 			return list(reversed([curr, *prev]))
 
 		# add children to heap
-		for child in graph[curr]:
+		for child in graph[curr].keys():
 			# calculate cost g(x)
 			new_cost = costs[curr] + graph[curr][child]
 
